@@ -1,6 +1,7 @@
-import { Meta, Links } from "@remix-run/react";
-import styles from "./styles/";
-import normalize from "./styles/normalize.css";
+import { Meta, Links, Outlet } from "@remix-run/react";
+import Header from "~/components/header";
+import styles from "~/styles/index.css";
+import normalize from "~/styles/normalize.css";
 
 export function meta() {
     return {
@@ -30,7 +31,8 @@ export function links() {
 export default function App() {
     return (
         <Document>
-            <h1>Desde App</h1>
+            <Header />
+            <Outlet />
         </Document>
     );
 }
