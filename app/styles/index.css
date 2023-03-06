@@ -85,14 +85,14 @@ main {
 }
 
 .header .navegacion a::after {
-    content: '';
+    content: "";
     position: absolute;
     background-color: #ffc;
     height: 3px;
     width: 0%;
     left: 0;
     bottom: -5px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .header .navegacion a:hover {
@@ -100,6 +100,14 @@ main {
 }
 
 .header .navegacion a:hover::after {
+    width: 100%;
+}
+
+.header .navegacion a.active {
+    color: white;
+}
+
+.header .navegacion a::after.active {
     width: 100%;
 }
 
