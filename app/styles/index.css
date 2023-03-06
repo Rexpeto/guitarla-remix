@@ -36,3 +36,72 @@ main {
     color: var(--primary);
     margin: 5rem 0;
 }
+
+/* Header */
+.header {
+    background-image: linear-gradient(
+            to right,
+            rgb(0 0 0 / 0.8),
+            rgb(0 0 0 / 0.7)
+        ),
+        url(/img/header.jpg);
+    padding: 6rem 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.header .logo {
+    width: 25rem;
+}
+
+.barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.header .navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header .navegacion a {
+    position: relative;
+    text-decoration: none;
+    color: #a0a0a0;
+    padding: 0 5px;
+}
+
+.header .navegacion a::after {
+    content: '';
+    position: absolute;
+    background-color: #ffc;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -5px;
+    transition: .3s;
+}
+
+.header .navegacion a:hover {
+    color: white;
+}
+
+.header .navegacion a:hover::after {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .header .navegacion {
+        flex-direction: row;
+    }
+}
