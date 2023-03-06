@@ -175,3 +175,25 @@ main {
 .copyright {
     color: white;
 }
+
+/* Nosotros */
+.nosotros .contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .nosotros .contenido {
+        flex-direction: row;
+    }
+}
+
+.nosotros .contenido img {
+    width: 50rem;
+    border-radius: 10px;
+    box-shadow: 8px 10px 5px -11px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 8px 10px 5px -11px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 8px 10px 5px -11px rgba(0, 0, 0, 0.7);
+}
