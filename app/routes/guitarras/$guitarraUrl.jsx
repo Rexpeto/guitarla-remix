@@ -7,10 +7,23 @@ export const loader = async (res) => {
 
     const guitarra = await getGuitarra(params.guitarraUrl);
 
+    if (!guitarra) {
+        throw new Response("", {
+            status: 404,
+            statusText: "Guitarra no encontrada",
+        });
+    }
+
     return guitarra;
 };
 
 export const meta = ({ data }) => {
+    if (!data) {
+        return {
+            title: "Guitarra no encontrada",
+            descripcion: "Venta de guitarra, guitarra no encontrada",
+        };
+    }
     const { nombre } = data;
 
     return {
