@@ -1,4 +1,11 @@
-import { Meta, Links, Outlet, Scripts, LiveReload } from "@remix-run/react";
+import {
+    Meta,
+    Links,
+    Outlet,
+    Scripts,
+    LiveReload,
+    useCatch,
+} from "@remix-run/react";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
 import styles from "~/styles/index.css";
@@ -54,3 +61,21 @@ function Document({ children }) {
         </html>
     );
 }
+
+// Manejo de errores
+export const CatchBoundary = () => {
+    const error = useCatch();
+    return (
+        <Document>
+            <p className="error">{error.statusText}</p>
+        </Document>
+    );
+};
+
+export const ErrorBoundary = ({error}) => {
+    return (
+        <Document>
+            <p className="error">{error.statusText}</p>
+        </Document>
+    );
+};
