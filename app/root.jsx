@@ -5,6 +5,7 @@ import {
     Scripts,
     LiveReload,
     useCatch,
+    Link,
 } from "@remix-run/react";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
@@ -67,15 +68,25 @@ export const CatchBoundary = () => {
     const error = useCatch();
     return (
         <Document>
-            <p className="error">{error.statusText}</p>
+            <div className="contenido-error">
+                <p className="error">{error.statusText}</p>
+                <Link to="/" className="volver">
+                    Volver al Inicio
+                </Link>
+            </div>
         </Document>
     );
 };
 
-export const ErrorBoundary = ({error}) => {
+export const ErrorBoundary = ({ error }) => {
     return (
         <Document>
-            <p className="error">{error.statusText}</p>
+            <div className="contenido-error">
+                <p className="error">{error.statusText}</p>
+                <Link to="/" className="volver">
+                    Volver al Inicio
+                </Link>
+            </div>
         </Document>
     );
 };
