@@ -1,4 +1,5 @@
 import { Link } from "@remix-run/react";
+import { formatearFecha } from "~/utils/helpers";
 
 const Post = ({ post }) => {
     const { titulo, url, imagen, publishedAt: publicado } = post;
@@ -13,7 +14,7 @@ const Post = ({ post }) => {
                 />
                 <div className="contenido">
                     <h3 className="titulo">{titulo}</h3>
-                    <p className="fecha">{publicado}</p>
+                    <p className="fecha">{formatearFecha(publicado)}</p>
                 </div>
             </article>
         </Link>
