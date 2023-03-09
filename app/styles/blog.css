@@ -41,6 +41,10 @@ body {
     margin: 0;
 }
 
+.post img {
+    border-radius: 8px;
+}
+
 .post .contenido .titulo {
     font-size: 2rem;
 }
