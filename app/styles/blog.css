@@ -44,3 +44,8 @@ body {
 .post .contenido .titulo {
     font-size: 2rem;
 }
+
+.post .contenido .fecha {
+    font-size: 1.8rem;
+    margin: 0;
+}
