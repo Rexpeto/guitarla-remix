@@ -5,7 +5,7 @@ const Post = ({ post }) => {
     const { titulo, url, imagen, publishedAt: publicado } = post;
 
     return (
-        <Link to={url} className="post">
+        <Link to={`/posts/${url}`} className="post">
             <article>
                 <img
                     className="imagen"
