@@ -3,6 +3,8 @@ import { getGuitarras } from "~/models/guitarras.server";
 import { getPosts } from "~/models/blog.server";
 import ListadoGuitarras from "~/components/listado-guitarras";
 import stylesGuitarra from "~/styles/guitarras.css";
+import ListadoPost from "~/components/listado-posts";
+import stylesPost from "~/styles/blog.css";
 
 export const meta = () => {
     return {
@@ -16,6 +18,10 @@ export const links = () => {
         {
             rel: "stylesheet",
             href: stylesGuitarra,
+        },
+        {
+            rel: "stylesheet",
+            href: stylesPost,
         },
     ];
 };
@@ -36,6 +42,7 @@ function Index() {
         <>
             <main className="contenedor">
                 <ListadoGuitarras guitarras={guitarras} />
+                <ListadoPost posts={posts} />
             </main>
         </>
     );
