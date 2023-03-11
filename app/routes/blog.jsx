@@ -9,6 +9,13 @@ export const loader = async () => {
     return posts;
 };
 
+export const meta = () => {
+    return {
+        title: "GuitarLa - Blog",
+        descripcion: "GuitarLa, venta de guitarras de la mejor calidad",
+    };
+};
+
 export const links = () => {
     return [
         {
