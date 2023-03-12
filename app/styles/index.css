@@ -221,3 +221,7 @@ main {
     border: 1px solid #69da00;
     color: white;
 }
+
+.carrito {
+    width: 2rem;
+}
