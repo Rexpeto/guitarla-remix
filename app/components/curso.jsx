@@ -4,7 +4,7 @@ const Curso = ({ curso }) => {
 
     return (
         <section className="curso">
-            <style jsx>{`
+            <style jsx="true">{`
                 .curso {
                     background-image: linear-gradient(
                             to right,
