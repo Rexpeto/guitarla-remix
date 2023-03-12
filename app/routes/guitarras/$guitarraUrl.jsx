@@ -54,6 +54,19 @@ const Guitarra = () => {
                 <h3 className="nombre">{nombre}</h3>
                 <p className="texto">{descripcion}</p>
                 <p className="precio">${precio}</p>
+                <form className="formulario">
+                    <label htmlFor="cantidad">Cantidad</label>
+                    <select name="cantidad" id="cantidad">
+                        <option value="" disabled selected>
+                            -- Seleccione --
+                        </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <input type="submit" value="Agregar" />
+                </form>
             </div>
         </main>
     );
