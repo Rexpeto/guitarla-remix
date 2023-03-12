@@ -1,0 +1,11 @@
+.curso {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.curso .texto {
+    color: white;
+}
