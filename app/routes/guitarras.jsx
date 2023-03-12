@@ -1,4 +1,4 @@
-import { useLoaderData, Outlet } from "@remix-run/react";
+import { Outlet } from "@remix-run/react";
 import styleGuitarra from "~/styles/guitarras.css";
 
 export function links() {
