@@ -32,6 +32,9 @@ const Articulo = ({ producto }) => {
                     Subtotal: <span>${precio * cantidad}</span>
                 </p>
             </div>
+            <button type="button" className="btn-eliminar">
+                <span>X</span>
+            </button>
         </div>
     );
 };
