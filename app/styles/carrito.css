@@ -48,7 +48,7 @@
 }
 
 .box-guitarra .imagen {
-    max-width: 80px;
+    max-width: 120px;
     margin: 0 auto;
 }
 
@@ -84,4 +84,8 @@
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.btn-eliminar:hover {
+    transform: rotate(180deg);
 }
