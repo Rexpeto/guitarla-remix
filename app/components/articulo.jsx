@@ -2,7 +2,7 @@ import { useOutletContext } from "@remix-run/react";
 
 const Articulo = ({ producto }) => {
     const { nombre, cantidad, imagen, precio, id } = producto;
-    const { actualizarCantidad } = useOutletContext();
+    const { actualizarCantidad, eliminarGuitarra } = useOutletContext();
     return (
         <div className="box-guitarra">
             <div className="imagen">
@@ -32,7 +32,11 @@ const Articulo = ({ producto }) => {
                     Subtotal: <span>${precio * cantidad}</span>
                 </p>
             </div>
-            <button type="button" className="btn-eliminar">
+            <button
+                type="button"
+                className="btn-eliminar"
+                onClick={() => eliminarGuitarra(producto.id)}
+            >
                 <span>X</span>
             </button>
         </div>
