@@ -30,6 +30,7 @@
 
 .box-guitarra {
     display: grid;
+    position: relative;
     grid-template-columns: 1fr 2fr;
     align-items: center;
     padding: 1rem;
@@ -37,6 +38,7 @@
     box-shadow: rgb(0 0 0 / 25%) 0px 2px 4px 0px;
     border-radius: 8px;
     margin-bottom: 2rem;
+    overflow: hidden;
     transition: box-shadow 200ms ease-in-out 0s;
 }
 
@@ -67,4 +69,19 @@
     width: 100%;
     border-radius: 10px;
     padding: 0 1rem;
+    outline: none;
+}
+
+.btn-eliminar {
+    position: absolute;
+    padding: 1.5rem 2rem;
+    background-color: red;
+    color: #fff;
+    top: -0.8rem;
+    right: -1rem;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
 }
