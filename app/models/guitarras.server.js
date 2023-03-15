@@ -18,7 +18,7 @@ export const getGuitarra = async (guitarra) => {
         );
         const resultado = await respuesta.json();
 
-        return resultado?.data[0]?.attributes;
+        return resultado?.data[0];
     } catch (error) {
         console.log(error);
     }
