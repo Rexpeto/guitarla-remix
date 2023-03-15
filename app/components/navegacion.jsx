@@ -28,7 +28,7 @@ const Navegacion = () => {
                 Tienda
             </Link>
             <Link to="/carrito">
-                <img src={imagen} alt="Carrito" className="carrito" />
+                <img src={imagen} alt="Carrito" className="carrito-img" />
             </Link>
         </nav>
     );
