@@ -1,5 +1,7 @@
+import { useEffect, useState } from "react";
 import { useOutletContext } from "@remix-run/react";
 import Articulo from "~/components/articulo";
+import Resumen from "~/components/resumen";
 import style from "~/styles/carrito.css";
 
 export const links = () => {
@@ -19,7 +21,16 @@ export const meta = () => {
 };
 
 const Carrito = () => {
+    const [total, setTotal] = useState(0);
     const { carrito } = useOutletContext();
+
+    useEffect(() => {
+        const calculoTotal = carrito.reduce(
+            (total, producto) => total + producto.cantidad * producto.precio,
+            0
+        );
+        setTotal(calculoTotal);
+    }, [carrito]);
 
     return (
         <main className="contenedor">
@@ -34,10 +45,8 @@ const Carrito = () => {
                               <Articulo producto={producto} key={producto.id} />
                           ))}
                 </div>
-                <aside className="resumen">
-                    <h3>Resumen del Pedido</h3>
-                    <p>Total a pagar: $</p>
-                </aside>
+
+                <Resumen total={total} />
             </div>
         </main>
     );
