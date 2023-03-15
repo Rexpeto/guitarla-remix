@@ -1,4 +1,4 @@
-import { Outlet } from "@remix-run/react";
+import { Outlet, useOutletContext } from "@remix-run/react";
 import styleGuitarra from "~/styles/guitarras.css";
 
 export function links() {
@@ -11,6 +11,6 @@ export function links() {
 }
 
 function Tienda() {
-    return <Outlet />;
+    return <Outlet context={useOutletContext()} />;
 }
 export default Tienda;
